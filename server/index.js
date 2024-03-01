@@ -19,7 +19,17 @@ mongoose
     console.log(err);
   });
 
-app.use(cors());
+const corsOptions = {
+  origin: "https://ecommerce-mern-omega.vercel.app", // Replace this with the requesting origin or a function to dynamically set it
+  credentials: true, // To allow cookies and HTTP authentication
+};
+
+app.use(cors(corsOptions));
+
+app.get("/", (req, res) => {
+  return res.status(200).json("Hi this is E-commerce Pojects");
+});
+
 app.use(Express.urlencoded({ extended: true }));
 app.use(Express.json());
 app.use("/api/users", userRouter);
