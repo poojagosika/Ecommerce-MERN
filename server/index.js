@@ -20,7 +20,7 @@ mongoose
   });
 
 const corsOptions = {
-  origin: "https://ecommerce-mern-omega.vercel.app", // Replace this with the requesting origin or a function to dynamically set it
+  origin: "https://ecommerce-mern-m3qo.vercel.app", // Replace this with the requesting origin or a function to dynamically set it
   credentials: true, // To allow cookies and HTTP authentication
 };
 
